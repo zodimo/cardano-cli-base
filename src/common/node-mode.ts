@@ -29,6 +29,6 @@ export class NodeMode extends CompositeCommandParameter {
 
   static cardano(slotsPerEpoch?: number): NodeMode {
     const epochSlots = MaybeCommandParameterFactory.maybeNumeric('epoch-slots', slotsPerEpoch);
-    return NodeMode.from(BooleanCommandParameter.from(NodeModes.CARDANO), epochSlots.toString());
+    return NodeMode.from(BooleanCommandParameter.from(NodeModes.CARDANO), epochSlots);
   }
 }
