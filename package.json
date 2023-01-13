@@ -1,6 +1,6 @@
 {
   "name": "@zodimo/cardano-cli-base",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "package with command building block and shared parameters",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
