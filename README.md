@@ -7,6 +7,9 @@ package with command building block and shared parameters
 - era
 - network
   - mainnet
-  - testnodemagic
+  - testnet-magic
 - node-mode
--
+  - shelley-mode
+  - byron-mode
+  - cardano-mode
+- out-file
