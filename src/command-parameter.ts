@@ -86,7 +86,7 @@ export class MaybeCommandParameterFactory {
     shouldQuoteValue?: boolean,
   ): StringCommandParameter | NothingCommandParameter {
     if (paramValue) {
-      StringCommandParameter.from(paramKey, paramValue, shouldQuoteValue);
+      return StringCommandParameter.from(paramKey, paramValue, shouldQuoteValue);
     }
     return new NothingCommandParameter();
   }
