@@ -67,6 +67,11 @@ export class CompositeCommandParameter implements CommandParameter {
     return new CompositeCommandParameter(...params);
   }
 
+  withParameter(parameter: CommandParameter): CompositeCommandParameter {
+    this.params.push(parameter);
+    return this;
+  }
+
   toString(): string {
     //filter out NothingCommandParameters
     const filteredParams = this.params.filter((param) => !(param instanceof NothingCommandParameter));
