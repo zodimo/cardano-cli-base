@@ -67,7 +67,7 @@ export class CompositeCommandParameter implements CommandParameter {
     return new CompositeCommandParameter(...params);
   }
 
-  withParameter(parameter: CommandParameter): CompositeCommandParameter {
+  protected withParameter(parameter: CommandParameter): CompositeCommandParameter {
     this.params.push(parameter);
     return this;
   }
