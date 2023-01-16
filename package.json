@@ -1,6 +1,6 @@
 {
   "name": "@zodimo/cardano-cli-base",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "package with command building block and shared parameters",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -11,8 +11,8 @@
     "build": "tsc -p tsconfig.build.json",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
-    "prepublish":"npm run format && npm run lint && npm run test",
-    "publish:npm": "npm run prepublish && npm run clean && npm run build && npm publish --access public",
+    "prepublish":"npm run format && npm run lint && npm run test && npm run clean && npm run build",
+    "publish:npm": "npm run prepublish && npm publish --access public",
     "clean": "tsc -b --clean"
   },
   "repository": {

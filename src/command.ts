@@ -5,7 +5,10 @@ export abstract class Command<T extends CommandOptions> {
   abstract getCommandName(): string;
 
   getCommand(): string {
-    const output: string[] = [this.commandPrefix, this.getCommandName(), this.options.toString()];
+    const output: string[] = [this.commandPrefix, this.getCommandName()];
+    if (this.options.toString()) {
+      output.push(this.options.toString());
+    }
     return output.join(' ');
   }
 }
